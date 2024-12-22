@@ -19,13 +19,20 @@ const Projects = () => {
           What I Built
         </h4>
         <div className="mt-8 flex justify-between items-stretch flex-wrap">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card
+            heading="TinyZr a Serverless URL Shortener"
+            description="TinyZr is a sleek and efficient URL shortener service created by Adil Ansari. Simplify and enhance your online experience by transforming long cumbersome URLs into concise links with TinyZr."
+            link="https://urlshortener.tinyzr.link"
+            more="Checkout TinyZr"
+          />
+          <Card
+            heading="Multi Tier AWS Cloud Infrastructure"
+            description="Built a scalable, secure multi-tier AWS cloud infrastructure using ASG, EC2, ELB, VPC, RDS, CloudWatch, SES, SNS, Lambda and S3 for high availability and cost efficiency."
+            link="https://urlshortener.tinyzr.link"
+            more="Checkout Architecture"
+          />
         </div>
-        <a
+        {/* <a
           href="hello"
           class=" w-32 flex items-center py-4 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mx-auto mt-4"
         >
@@ -42,7 +49,7 @@ const Projects = () => {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </a> */}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import heroBg from "../assets/webdev.svg";
-import Typical from "react-typical";
+import { ReactTyped as Typed } from "react-typed";
 import { contactLinks } from "../constants";
 import { ThemeContext } from "../themeProvider";
 import { motion } from "framer-motion";
@@ -30,17 +30,13 @@ const Home = () => {
               >
                 Hi, I am Adil
               </motion.span>
+              <div></div>
               <span className="block text-blue-500 z-0 lg:inline">
-                <Typical
-                  steps={[
-                    "DevOps Engineer",
-                    1000,
-                    "Cloud Engineer",
-                    1000,
-                    "SRE",
-                    1000,
-                  ]}
-                  loop={Infinity}
+                <Typed
+                  strings={["DevOps Engineer", "Cloud Engineer", "SRE"]}
+                  typeSpeed={50}
+                  backSpeed={30}
+                  loop
                 />
               </span>
             </h1>
