@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Installing and Configuring AWS CLI
+      - name: Installing AWS CLI
         run: |
           echo "Running deployment script..."
           sudo apt-get update
@@ -23,10 +23,6 @@ jobs:
           unzip awscliv2.zip
           sudo ./aws/install --update
           aws --version 
-          echo "configuring aws credentials"
-          export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
-          export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws sts get-caller-identity
 
       - name: Application Build Step
         run: |
@@ -37,19 +33,17 @@ jobs:
           
       - name: Deploying app build files to S3
         run: |
-          aws sts get-caller-identity
+          echo "configuring aws credentials"
           export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
           export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws sts get-caller-identity
           echo "Copying build folder to S3"
           aws s3 sync build/ ${{ secrets.S3_URI }}
           
       - name: Invalidating Cloudfront cache
         run: |
-          aws sts get-caller-identity
+          echo "configuring aws credentials"
           export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
           export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws sts get-caller-identity
           echo "Invalidating Cloudfront cache for /* path"
           aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
 
