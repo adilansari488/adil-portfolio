@@ -37,12 +37,12 @@ jobs:
       - name: Deploying app build files to S3
         run: |
           echo "Copying build folder to S3"
-          aws s3 sync build/ {{ secrets.S3_URI }}
+          aws s3 sync build/ ${{ secrets.S3_URI }}
           
       - name: Invalidating Cloudfront cache
         run: |
           echo "Invalidating Cloudfront cache for /* path"
-          aws cloudfront create-invalidation --distribution-id {{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
 
       - name: Cleanup task
         run: |
