@@ -7,7 +7,7 @@ on:
       - portfolio-v1
 
 jobs:
-  run-inline-script:
+  Deploying-Portfolio-Website:
     runs-on: ubuntu-latest
 
     steps:
