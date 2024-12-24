@@ -31,6 +31,12 @@ const Projects = () => {
             link="https://urlshortener.tinyzr.link"
             more="Checkout Architecture"
           />
+          <Card
+            heading="Reduced AWS Cloud Infrastructure Cost by 20%"
+            description="Achieved a 20% reduction in AWS infrastructure costs by analyzing and right-sizing EC2 instances, implementing S3 lifecycle policies, introducing Auto Scaling groups, and migrating an over-engineered EKS application to EC2 instances, resulting in significant cost savings for the project."
+            // link="https://urlshortener.tinyzr.link"
+            // more="Checkout Architecture"
+          />
         </div>
         {/* <a
           href="hello"

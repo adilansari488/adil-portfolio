@@ -15,7 +15,7 @@ const Card = ({ imageUrl, heading, description, link, more }) => {
       <a href={link}>
         {/* <img
           className="rounded-t-lg w-full"
-          // src= "http://13.126.194.79:8869/static/media/cloudBg.f28b5c6961fd82be839c.png" //{imageUrl}
+          // src= "" //{imageUrl}
           alt={heading}
         /> */}
       </a>
@@ -28,6 +28,7 @@ const Card = ({ imageUrl, heading, description, link, more }) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {description}
         </p>
+        {link && (
         <a
           href={link}
           target="_blank"
@@ -47,7 +48,7 @@ const Card = ({ imageUrl, heading, description, link, more }) => {
               clipRule="evenodd"
             ></path>
           </svg>
-        </a>
+        </a> )}
       </div>
     </motion.div>
   );
