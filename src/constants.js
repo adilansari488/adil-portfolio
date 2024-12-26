@@ -19,7 +19,7 @@ export const techStack = [
   { name: "Prometheus", link: "https://img.icons8.com/?size=100&id=NrcKwdmlOBfE&format=png&color=000000" },
   
   { name: "Grafana", link: "https://img.icons8.com/?size=100&id=9uVrNMu3Zx1K&format=png&color=000000" },
-  { name: "RedHat Linux", link: "https://img.icons8.com/?size=100&id=h2fWCnoQXWPf&format=png&color=B60A0A" },
+  { name: "RedHat Linux", link: "https://img.icons8.com/?size=100&id=h2fWCnoQXWPf&format=png&color=EE0000" },
   { name: "SQL", link: "https://cdn-icons-png.flaticon.com/512/4299/4299956.png"},
   { name: "Mongo DB", link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" },
   { name: "Nginx", link: "https://img.icons8.com/?size=100&id=t2x6DtCn5Zzx&format=png&color=000000" },
@@ -62,3 +62,5 @@ export const articleData = [
 
 
 ]
+
+export const API_KEY = "GATEWAY_API_KEY"
