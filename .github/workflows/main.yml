@@ -28,9 +28,9 @@ jobs:
         run: |
           echo "Installing npm dependencies"
           npm install --force
+          sed -i "s/GATEWAY_API_KEY/${{ secrets.GATEWAY_API_KEY }}/g" src/constants.js
           echo "Building app using npm run build"
           npm run build
-          sed -i "s/GATEWAY_API_KEY/${{ secrets.GATEWAY_API_KEY }}/g" src/constants.js
           
       - name: Deploying app build files to S3
         run: |
