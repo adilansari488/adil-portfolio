@@ -28,8 +28,8 @@ const Projects = () => {
           <Card
             heading="Multi Tier AWS Cloud Infrastructure"
             description="Built a scalable, secure multi-tier AWS cloud infrastructure using ASG, EC2, ELB, VPC, RDS, CloudWatch, SES, SNS, Lambda and S3 for high availability and cost efficiency."
-            link="https://urlshortener.tinyzr.link"
-            more="Checkout Architecture"
+            // link="https://urlshortener.tinyzr.link"
+            // more="Checkout Architecture"
           />
           <Card
             heading="Reduced AWS Cloud Infrastructure Cost by 20%"

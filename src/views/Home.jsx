@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import heroBg from "../assets/webdev.svg";
+import heroBg from "../assets/heroBG.png";
 import { ReactTyped as Typed } from "react-typed";
 import { contactLinks } from "../constants";
 import { ThemeContext } from "../themeProvider";
